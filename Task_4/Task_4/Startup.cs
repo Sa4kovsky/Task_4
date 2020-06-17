@@ -12,6 +12,7 @@ using Task_4.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Task_4.Models;
 
 namespace Task_4
 {
@@ -30,11 +31,13 @@ namespace Task_4
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
-                .AddRoles<IdentityRole>()
-                .AddRoleManager<RoleManager<IdentityRole>>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                  .AddRoles<IdentityRole>()
+                  .AddRoleManager<RoleManager<IdentityRole>>()
+                  .AddEntityFrameworkStores<ApplicationDbContext>()
+                  .AddDefaultUI();
+            
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
@@ -70,12 +73,14 @@ namespace Task_4
             {
                 // Cookie settings
                 options.Cookie.HttpOnly = true;
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(2);
 
                 options.LoginPath = "/Identity/Account/Login";
-                options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+                options.AccessDeniedPath = "/Identity/Account/Login";
                 options.SlidingExpiration = true;
             });
+
+            services.Configure<SecurityStampValidatorOptions>(o => o.ValidationInterval = TimeSpan.FromSeconds(5));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

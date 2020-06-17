@@ -1,12 +1,61 @@
-﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>
+﻿@model IList<ViewUser>
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-<ul>
-    @foreach (var role in Model)
-    {
-        <li>@role.Name</li>
-    }
-</ul>
+<div id="toolbar" class="toolbar-fixed">
+    <div class="container">
+        <div class="text-center">
+            <button class="btn" id="buttonUnblock"><i class="fa fa-unlock"></i></button>
+            <button class="btn" id="buttonBlock"><i class="fa fa-lock"></i></button>
+            <button class="btn" id="buttonDelete"><i class="fa fa-trash" id="buttonDelete"></i></button>
+        </div>    
+    </div>
+</div>
+<div style="padding:60px 0px 60px 0px">
+    <p>
+        <h2 style="text-align:center">Table User</h2>
+    </p>
+
+    <table class="table table-hover home-content table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="fullCheckBox">
+                        <label class="custom-control-label" for="fullCheckBox">Full</label>
+                    </div>
+                </th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Registration Date</th>
+                <th>Login Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="@item.Id">
+                            <label class="custom-control-label" for="@item.Id">=></label>
+                        </div>
+                    </td>
+                    <td>@item.Id</td>
+                    <td>@item.UserName</td>
+                    <td>@item.Email</td>
+                    <td>@item.RegistrationDate</td>
+                    <td>@item.LoginDate</td>
+                    <td>@item.Role</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+
+

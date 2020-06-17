@@ -155,9 +155,7 @@ E:\Programm\Itransition\Task_4\Task_4\Task_4\obj\Debug\netcoreapp3.1\Razor\Areas
 E:\Programm\Itransition\Task_4\Task_4\Task_4\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 E:\Programm\Itransition\Task_4\Task_4\Task_4\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 E:\Programm\Itransition\Task_4\Task_4\Task_4\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
-E:\Programm\Itransition\Task_4\Task_4\Task_4\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
-E:\Programm\Itransition\Task_4\Task_4\Task_4\bin\Debug\netcoreapp3.1\EntityFramework.dll
-E:\Programm\Itransition\Task_4\Task_4\Task_4\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.Core.dll
-E:\Programm\Itransition\Task_4\Task_4\Task_4\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Programm\Itransition\Task_4\Task_4\Task_4\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+E:\Programm\Itransition\Task_4\Task_4\Task_4\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 E:\Programm\Itransition\Task_4\Task_4\Task_4\obj\Debug\netcoreapp3.1\Task_4.MvcApplicationPartsAssemblyInfo.cs
 E:\Programm\Itransition\Task_4\Task_4\Task_4\obj\Debug\netcoreapp3.1\Task_4.MvcApplicationPartsAssemblyInfo.cache

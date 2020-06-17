@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Этот файл используется процессом публикации или упаковки вашего веб-проекта. Можно настроить поведение этого процесса,
+изменив этот файл MSBuild. Подробности см. на странице https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA51lYDGNeRk6QlR/3ilNIaAAAAAACAAAAAAADZgAAwAAAABAAAADobOHJxaahxB2e8h1doSPPAAAAAASAAACgAAAAEAAAAJsQf7ZRP+vjlkuIXUGpMfuAAAAA/Q4YWIjPcbxoMSgXB+kp2sMTVlSFUeh7HSdXyAK6StE0++buVIkvO0/tjuppKGJJTLfaVW1Yk3YGIm8F0QA/y9DOJB259DqbuqPTJ/mOz5RRAdjsVR/5yRPbpRdKLzTkyBmGoVdBgUupONPi6X6Vo15GimV5qz4qiMOTE+bFTccUAAAA/+mk7HJU0PhNVvmQfUKIkiYKPBY=</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:task-4dbserver.database.windows.net,1433%3bInitial Catalog=Task_4_db%3bUser Id=1%40task-4dbserver%3bPassword=1</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Task_4.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:task-4dbserver.database.windows.net,1433%3bInitial Catalog=Task_4_db%3bUser Id=1%40task-4dbserver%3bPassword=1</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
